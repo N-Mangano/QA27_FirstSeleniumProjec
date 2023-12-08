@@ -37,16 +37,16 @@ public class DemoWebShop {
 
   @Test
   public void findElementByXpath() {
-    driver.findElement(By.xpath("//*['bar-notification']"));
-    driver.findElement(By.xpath("//*['dialog-notifications-success']"));
-    driver.findElement(By.xpath("//*['dialog-notifications-error']"));
-    driver.findElement(By.xpath("//*['.master-wrapper-page']"));
-    driver.findElement(By.xpath("//*['.topic-html-content']"));
-    driver.findElement(By.xpath("//*['.topic-html-content-body']"));
-    driver.findElement(By.xpath("//*['.Notification']"));
-    driver.findElement(By.xpath("//*['.Error']"));
-    driver.findElement(By.xpath("//*['.Close']"));
-    driver.findElement(By.xpath("//*['master-wrapper-content']"));
+    driver.findElement(By.xpath("//*[@id='bar-notification']"));
+    driver.findElement(By.xpath("//*[@id='dialog-notifications-success']"));
+    driver.findElement(By.xpath("//*[@id='dialog-notifications-error']"));
+    driver.findElement(By.xpath("//*[@class='master-wrapper-page']"));
+    driver.findElement(By.xpath("//*[@class='topic-html-content']"));
+    driver.findElement(By.xpath("//*[@class='topic-html-content-body']"));
+    driver.findElement(By.xpath("//*[@title='Notification']"));
+    driver.findElement(By.xpath("//*[@title='Error']"));
+    driver.findElement(By.xpath("//*[@title='Close']"));
+    driver.findElement(By.xpath("//*[@class='master-wrapper-content']"));
   }
 
   @AfterMethod(enabled = true)

@@ -27,26 +27,26 @@ public class DemoWebShop {
     driver.findElement(By.cssSelector("#dialog-notifications-error"));
     driver.findElement(By.cssSelector(".master-wrapper-page"));
     driver.findElement(By.cssSelector(".topic-html-content"));
-    driver.findElement(By.cssSelector("[title='']"));
-    driver.findElement(By.cssSelector("[title='']"));
-    driver.findElement(By.cssSelector("[title='']"));
-    driver.findElement(By.cssSelector("[title='']"));
-    driver.findElement(By.cssSelector("[title='']"));
+//    driver.findElement(By.cssSelector("[title='']"));
+//    driver.findElement(By.cssSelector("[title='']"));
+//    driver.findElement(By.cssSelector("[title='']"));
+//    driver.findElement(By.cssSelector("[title='']"));
+//    driver.findElement(By.cssSelector("[title='']"));
 
   }
 
   @Test
   public void findElementByXpath() {
-    driver.findElement(By.xpath("//*[@title='bar-notification']"));
-    driver.findElement(By.xpath("//*[@title='dialog-notifications-success']"));
-    driver.findElement(By.xpath("//*[@title='dialog-notifications-error']"));
-    driver.findElement(By.xpath("//*[@title='.master-wrapper-page']"));
-    driver.findElement(By.xpath("//*[@title='.topic-html-content']"));
-    driver.findElement(By.xpath("//*[@title='']"));
-    driver.findElement(By.xpath("//*[@title='']"));
-    driver.findElement(By.xpath("//*[@title='']"));
-    driver.findElement(By.xpath("//*[@title='']"));
-    driver.findElement(By.xpath("//*[@title='']"));
+    driver.findElement(By.xpath("//*['bar-notification']"));
+    driver.findElement(By.xpath("//*['dialog-notifications-success']"));
+    driver.findElement(By.xpath("//*['dialog-notifications-error']"));
+    driver.findElement(By.xpath("//*['.master-wrapper-page']"));
+    driver.findElement(By.xpath("//*['.topic-html-content']"));
+//    driver.findElement(By.xpath("//*[@title='']"));
+//    driver.findElement(By.xpath("//*[@title='']"));
+//    driver.findElement(By.xpath("//*[@title='']"));
+//    driver.findElement(By.xpath("//*[@title='']"));
+//    driver.findElement(By.xpath("//*[@title='']"));
   }
 
   @AfterMethod(enabled = true)

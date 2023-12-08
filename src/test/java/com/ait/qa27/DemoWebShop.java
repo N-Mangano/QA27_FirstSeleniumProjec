@@ -27,11 +27,11 @@ public class DemoWebShop {
     driver.findElement(By.cssSelector("#dialog-notifications-error"));
     driver.findElement(By.cssSelector(".master-wrapper-page"));
     driver.findElement(By.cssSelector(".topic-html-content"));
-//    driver.findElement(By.cssSelector("[title='']"));
-//    driver.findElement(By.cssSelector("[title='']"));
-//    driver.findElement(By.cssSelector("[title='']"));
-//    driver.findElement(By.cssSelector("[title='']"));
-//    driver.findElement(By.cssSelector("[title='']"));
+    driver.findElement(By.cssSelector(".topic-html-content-body"));
+    driver.findElement(By.cssSelector("[title='Notification']"));
+    driver.findElement(By.cssSelector("[title='Error']"));
+    driver.findElement(By.cssSelector("[title='Close']"));
+    driver.findElement(By.cssSelector(".master-wrapper-content"));
 
   }
 
@@ -42,11 +42,11 @@ public class DemoWebShop {
     driver.findElement(By.xpath("//*['dialog-notifications-error']"));
     driver.findElement(By.xpath("//*['.master-wrapper-page']"));
     driver.findElement(By.xpath("//*['.topic-html-content']"));
-//    driver.findElement(By.xpath("//*[@title='']"));
-//    driver.findElement(By.xpath("//*[@title='']"));
-//    driver.findElement(By.xpath("//*[@title='']"));
-//    driver.findElement(By.xpath("//*[@title='']"));
-//    driver.findElement(By.xpath("//*[@title='']"));
+    driver.findElement(By.xpath("//*['.topic-html-content-body']"));
+    driver.findElement(By.xpath("//*['.Notification']"));
+    driver.findElement(By.xpath("//*['.Error']"));
+    driver.findElement(By.xpath("//*['.Close']"));
+    driver.findElement(By.xpath("//*['master-wrapper-content']"));
   }
 
   @AfterMethod(enabled = true)

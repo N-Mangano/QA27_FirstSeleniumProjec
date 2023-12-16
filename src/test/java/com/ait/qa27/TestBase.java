@@ -1,9 +1,12 @@
 package com.ait.qa27;
 
 import java.time.Duration;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -24,5 +27,14 @@ public class TestBase {
   }
   public  boolean isElementPresent(By locator) {
     return driver.findElements(locator).size()>0;
+  }
+  public boolean isAlertAppears() {
+    Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20))
+        .until(ExpectedConditions.alertIsPresent());
+    if (alert==null) {
+      return false;
+    }else {
+      return true;
+    }
   }
 }

@@ -14,13 +14,13 @@ import org.testng.annotations.Test;
 public class CreateAccountTests extends TestBase{
 
   @BeforeMethod
-  public void ensurePreconding() {
+  public void ensurePrecondition() {
     if (!isElementPresent(By.cssSelector("[href='/register']"))){
-      driver.findElement(By.xpath("//button[.='Continue']")).click();
+      driver.findElement(By.xpath("//button[.='Log out']")).click();
     }
   }
   @Test
-  public void registerNewUserPositiveTest() {
+  public void registerExistedNegativeTest() {
     driver.findElement(By.cssSelector("[href='/register']")).click();
    // driver.findElement(By.name("gender-male")).click();
     driver.findElement(By.name("FirstName")).click();
@@ -31,7 +31,7 @@ public class CreateAccountTests extends TestBase{
     driver.findElement(By.name("LastName")).sendKeys("Bergwein");
     driver.findElement(By.name("Email")).click();
     driver.findElement(By.name("Email")).clear();
-    driver.findElement(By.name("Email")).sendKeys("luis12@gmail.com");
+    driver.findElement(By.name("Email")).sendKeys("luis156@gmail.com");
     driver.findElement(By.name("Password")).click();
     driver.findElement(By.name("Password")).clear();
     driver.findElement(By.name("Password")).sendKeys("Luis1234$");
@@ -39,6 +39,8 @@ public class CreateAccountTests extends TestBase{
     driver.findElement(By.name("ConfirmPassword")).clear();
     driver.findElement(By.name("ConfirmPassword")).sendKeys("Luis1234$");
     driver.findElement(By.name("register-button")).click();
-    Assert.assertTrue(isElementPresent(By.xpath("//button[.='Continue']")));
+
+    Assert.assertTrue(isAlertAppears());
   }
+
 }

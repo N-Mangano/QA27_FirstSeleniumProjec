@@ -16,7 +16,7 @@ public class CreateAccountTests extends TestBase{
   @BeforeMethod
   public void ensurePrecondition() {
     if (!isElementPresent(By.cssSelector("[href='/register']"))){
-      driver.findElement(By.xpath("//button[.='Log out']")).click();
+      driver.findElement(By.xpath("//button[.='Log in']")).click();
     }
   }
   @Test
@@ -39,6 +39,8 @@ public class CreateAccountTests extends TestBase{
     driver.findElement(By.name("ConfirmPassword")).clear();
     driver.findElement(By.name("ConfirmPassword")).sendKeys("Luis1234$");
     driver.findElement(By.cssSelector("#register-button")).click();
+
+
 
     Assert.assertTrue(isElementPresent(By.cssSelector(".master-wrapper-page:nth-child(4)")));
   }

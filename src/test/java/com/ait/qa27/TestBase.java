@@ -28,13 +28,5 @@ public class TestBase {
   public  boolean isElementPresent(By locator) {
     return driver.findElements(locator).size()>0;
   }
-  public boolean isAlertAppears() {
-    Alert alert = new WebDriverWait(driver, Duration.ofSeconds(20))
-        .until(ExpectedConditions.alertIsPresent());
-    if (alert==null) {
-      return false;
-    }else {
-      return true;
-    }
-  }
+
 }

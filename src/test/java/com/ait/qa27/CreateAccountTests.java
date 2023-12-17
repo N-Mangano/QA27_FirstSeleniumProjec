@@ -20,9 +20,9 @@ public class CreateAccountTests extends TestBase{
     }
   }
   @Test
-  public void registerExistedNegativeTest() {
+  public void registerExistedUserNegativeTest() {
     driver.findElement(By.cssSelector("[href='/register']")).click();
-   // driver.findElement(By.name("gender-male")).click();
+    driver.findElement(By.cssSelector("[for='gender-male']")).click();
     driver.findElement(By.name("FirstName")).click();
     driver.findElement(By.name("FirstName")).clear();
     driver.findElement(By.name("FirstName")).sendKeys("Luis");
@@ -31,16 +31,16 @@ public class CreateAccountTests extends TestBase{
     driver.findElement(By.name("LastName")).sendKeys("Bergwein");
     driver.findElement(By.name("Email")).click();
     driver.findElement(By.name("Email")).clear();
-    driver.findElement(By.name("Email")).sendKeys("luis156@gmail.com");
+    driver.findElement(By.name("Email")).sendKeys("luis7@gmail.com");
     driver.findElement(By.name("Password")).click();
     driver.findElement(By.name("Password")).clear();
     driver.findElement(By.name("Password")).sendKeys("Luis1234$");
     driver.findElement(By.name("ConfirmPassword")).click();
     driver.findElement(By.name("ConfirmPassword")).clear();
     driver.findElement(By.name("ConfirmPassword")).sendKeys("Luis1234$");
-    driver.findElement(By.name("register-button")).click();
+    driver.findElement(By.cssSelector("#register-button")).click();
 
-    Assert.assertTrue(isAlertAppears());
+    Assert.assertTrue(isElementPresent(By.cssSelector(".master-wrapper-page:nth-child(4)")));
   }
 
 }

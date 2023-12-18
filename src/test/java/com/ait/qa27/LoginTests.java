@@ -23,13 +23,10 @@ public class LoginTests extends TestBase{
     driver.findElement(By.name("Password")).clear();
     driver.findElement(By.name("Password")).sendKeys("Luis1234$");
     driver.findElement(By.cssSelector("[for='RememberMe']")).click();
-    driver.findElement(By.xpath("//button[.='Log in']")).click();
+    driver.findElement(By.cssSelector(".button-1.login-button")).click();
     //driver.findElement(By.cssSelector(".master-wrapper-page:nth-child(4)")).click();
 
-    Assert.assertTrue(isLogOutButtonPresent());
+    Assert.assertTrue(isElementPresent(By.cssSelector(".ico-logout")));
   }
 
-  public boolean isLogOutButtonPresent() {
-    return isElementPresent(By.xpath("//button[.='Log Out']"));
-  }
 }

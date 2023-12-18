@@ -24,7 +24,6 @@ public class LoginTests extends TestBase{
     driver.findElement(By.name("Password")).sendKeys("Luis1234$");
     driver.findElement(By.cssSelector("[for='RememberMe']")).click();
     driver.findElement(By.cssSelector(".button-1.login-button")).click();
-    //driver.findElement(By.cssSelector(".master-wrapper-page:nth-child(4)")).click();
 
     Assert.assertTrue(isElementPresent(By.cssSelector(".ico-logout")));
   }
